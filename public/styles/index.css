@@ -15,3 +15,12 @@ input{
     z-index: 100;
     /* visibility: hidden; */
 }
+
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 130px;
+    
+}

@@ -1,5 +1,5 @@
 import { canvas, ctx } from "../canvas"
-import { FONT_FAMILY, PRINTED_TEXT } from "../constants"
+import { FONT_FAMILY, GAP, PRINTED_TEXT } from "../constants"
 import { generateFontSize, getCenterXandY } from "../utils"
 import Particle from "./Particle"
 // import Particle from "./Particle"
@@ -16,7 +16,7 @@ class Effect{
         
         //particle text 
         this.particles = []
-        this.gap = 5
+        this.gap = GAP
         this.mouse = {
             radius: 20000,
             x:0,

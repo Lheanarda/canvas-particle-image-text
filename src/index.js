@@ -1,10 +1,19 @@
 import { canvas, ctx } from "./canvas";
 import Effect from "./class/Effect";
+import { PRINTED_TEXT, TOTAL_IMAGES } from "./constants";
+import { loadImage } from "./utils";
 
 
-window.addEventListener('load',()=>{
-    console.log('load')
+window.addEventListener('load',async ()=>{
     const effect = new Effect()
+
+
+    const load = document.getElementById('load')
+    for(let i = 1; i<= TOTAL_IMAGES; i++){
+        await loadImage(`/assets/photo${i}.jpg`)
+    }
+
+    load.style.visibility = 'hidden'
 
 
     function animate(){
@@ -20,8 +29,10 @@ window.addEventListener('load',()=>{
         canvas.width = window.innerWidth
         canvas.height = window.innerHeight
         effect.resize()
-        effect.wrapText(effect.textInput.value)
+        effect.wrapText(PRINTED_TEXT)
     })
 
 })
+
+
 

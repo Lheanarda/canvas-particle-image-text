@@ -1,4 +1,5 @@
 import { canvas, ctx } from "../canvas";
+import { TOTAL_IMAGES } from "../constants";
 import { randomIntFromInterval } from "../utils";
 
 class Particle{
@@ -22,7 +23,7 @@ class Particle{
 
         //image
         this.image = new Image()
-        this.image.src =`/assets/photo${randomIntFromInterval(1,18)}.jpg`
+        this.image.src =`/assets/photo${randomIntFromInterval(1,TOTAL_IMAGES)}.jpg`
     }
     
     draw(){
