@@ -7,13 +7,11 @@ import { loadImage } from "./utils";
 window.addEventListener('load',async ()=>{
     const effect = new Effect()
 
-
-    const load = document.getElementById('load')
     for(let i = 1; i<= TOTAL_IMAGES; i++){
         await loadImage(`/assets/photo${i}.jpg`)
     }
 
-    load.style.visibility = 'hidden'
+    
 
 
     function animate(){

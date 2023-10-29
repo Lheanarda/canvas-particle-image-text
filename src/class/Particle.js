@@ -50,6 +50,8 @@ class Particle{
         this.y += (this.vx *= this.friction) + (this.originY - this.y) * this.ease
         this.draw()
     }
+
+    
 }
 
 export default Particle
